@@ -9,9 +9,11 @@ const NavBar = ({ items }) => {
     <nav>
       <ul>
         {items.map((item) => (
-          <Link to={item.link}>{item.name}</Link>
+          <Link key={item.link} to={item.link}>
+            {item.name}
+          </Link>
         ))}
-        <i class="search"></i>
+        <i className="search"></i>
       </ul>
     </nav>
   );
