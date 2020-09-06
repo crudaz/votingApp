@@ -5,9 +5,19 @@ import "./style.scss";
 
 const Home = () => {
   return (
-    <figure>
-      <img alt="icon" src={image} />
-    </figure>
+    <>
+      <div className="home">
+        <div className="home__section">
+          <div>Content</div>
+          <div className="home__section__closing">
+            <span>CLOSING IN</span>
+            <span>
+              <span>22</span> days
+            </span>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
