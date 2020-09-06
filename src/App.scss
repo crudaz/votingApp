@@ -14,3 +14,9 @@
   font-weight: 900;
   src: local("Lato"), url(./fonts/Lato-Bold.ttf) format("truetype");
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
