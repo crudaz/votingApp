@@ -7,7 +7,6 @@ import { pageTitle, navLinks } from "./config";
 
 // Components
 import Header from "./components/Header";
-import Login from "./components/Login";
 import Home from "./components/Home";
 
 function App() {
@@ -15,10 +14,9 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header title={pageTitle} items={navLinks} />
-        <div className="content">
+        <main className="content">
           <Route exact path="/" component={Home} />
-          <Route path="/login" component={Login} />
-        </div>
+        </main>
       </div>
     </BrowserRouter>
   );

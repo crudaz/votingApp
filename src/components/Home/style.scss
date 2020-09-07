@@ -1,5 +1,10 @@
 .home {
   display: flex;
+  flex-grow: 1;
+
+  & > * {
+    display: flex;
+  }
 
   &__section {
     display: flex;
@@ -79,5 +84,11 @@
           url(/images/one.jpg);
       }
     }
+  }
+
+  &__content {
+    flex-grow: 1;
+    margin-top: 650px;
+    padding: 3rem 8rem;
   }
 }

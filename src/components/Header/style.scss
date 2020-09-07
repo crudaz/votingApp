@@ -16,8 +16,12 @@ header {
     display: flex;
   }
 
-  & h1 > a {
-    text-decoration: none;
-    color: white;
+  & h1 {
+    padding-left: 7rem;
+
+    & > a {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
