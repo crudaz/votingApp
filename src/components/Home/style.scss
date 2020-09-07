@@ -20,6 +20,12 @@
       flex-grow: 1;
     }
 
+    &__content {
+      display: flex;
+      align-items: center;
+      padding-left: 8rem;
+    }
+
     &__closing {
       max-height: 50px;
 
