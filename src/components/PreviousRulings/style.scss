@@ -1,0 +1,15 @@
+.previous {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+
+  &__title {
+    font-size: 36px;
+    padding: 20px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
