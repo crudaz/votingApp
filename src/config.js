@@ -25,3 +25,10 @@ export const characters = [
     dislike: 0,
   },
 ];
+
+export const notification = {
+  leftText: ["Speak out. Be heard.", "Be counted"],
+  rightText: `Rule of Thumb is a crowd sourced court of public opinion where anymore
+  and everyone can speak oyt and speak freely. It's easy: You opinion, we
+  analyze and put the data in a public report.`,
+};
