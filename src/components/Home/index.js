@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <>
       <div className="home">
-        {/* <div className="home__section">
+        <div className="home__section">
           <div className="home__section__content">
             {current && <CardHeader item={current} />}
           </div>
@@ -36,7 +36,7 @@ const Home = () => {
               <span>22</span> days
             </span>
           </div>
-        </div> */}
+        </div>
         <div className="home__content">
           {notification && showNotification && (
             <Notification
