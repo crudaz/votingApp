@@ -11,5 +11,9 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+
+    .card-image:nth-child(even) {
+      margin-left: 40px;
+    }
   }
 }

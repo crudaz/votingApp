@@ -93,3 +93,8 @@ export const notification = {
 export const previousText = {
   title: "Previous Rulings",
 };
+
+export const notificationForm = {
+  question: "Is there anymore else you would want us to add?",
+  image: "people.jpg",
+};

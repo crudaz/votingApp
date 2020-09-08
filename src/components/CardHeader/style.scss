@@ -56,10 +56,23 @@
 
     & > div:nth-child(1) {
       background-color: #1cbbb4;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #fff;
+        color: #1cbbb4;
+      }
     }
 
     & > div:nth-child(2) {
       background-color: #ffad1d;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #fff;
+        color: #ffad1d;
+      }
+
       & > svg {
         transform: scaleX(-1);
       }
