@@ -1,0 +1,81 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 410px;
+  width: 450px;
+  background-color: rgba(51, 51, 51, 0.7);
+  backdrop-filter: blur(16px);
+
+  & > * {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__section {
+    flex-direction: column;
+    padding: 20px 30px;
+    color: #fff;
+
+    &__title {
+      font-size: 56px;
+    }
+
+    &__opinion {
+      font-size: 20px;
+      padding: 20px 0;
+    }
+
+    &__moreInfo {
+      display: flex;
+      align-items: center;
+
+      & > a {
+        color: white;
+        padding-left: 5px;
+      }
+    }
+
+    &__question {
+      padding-top: 20px;
+      font-family: "Lato-black";
+      font-size: 22px;
+    }
+  }
+
+  &__actions {
+    height: 80px;
+
+    & > * {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 36px;
+    }
+
+    & > div:nth-child(1) {
+      background-color: #1cbbb4;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #fff;
+        color: #1cbbb4;
+      }
+    }
+
+    & > div:nth-child(2) {
+      background-color: #ffad1d;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #fff;
+        color: #ffad1d;
+      }
+
+      & > svg {
+        transform: scaleX(-1);
+      }
+    }
+  }
+}

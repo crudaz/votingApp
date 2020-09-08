@@ -1,0 +1,40 @@
+.notification {
+  display: flex;
+  flex-grow: 1;
+  background-color: #ebebeb;
+  justify-content: center;
+  height: 100px;
+
+  & > * {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  &__left {
+    padding: 20px;
+
+    & > span:nth-child(1) {
+      font-size: 21px;
+      width: 190px;
+    }
+
+    & > span:nth-child(2) {
+      font-family: "Lato-black";
+      font-size: 36px;
+    }
+  }
+
+  &__right {
+  }
+
+  &__action {
+    font-size: 22px;
+    padding: 20px;
+
+    & > svg {
+      cursor: pointer;
+    }
+  }
+}
