@@ -1,12 +1,19 @@
 import React, { useState } from "react";
-import image from "../assets/images/one.jpg";
-import { characters, notification, previousText } from "../../config";
+import {
+  characters,
+  notification,
+  previousText,
+  notificationForm,
+} from "../../config";
 
 import "./style.scss";
 
+// Components
 import CardHeader from "../CardHeader";
 import Notification from "../Notification";
 import PreviousRulings from "../PreviousRulings";
+import NotificationForm from "../NotificationForm";
+import Footer from "../Footer";
 
 const Home = () => {
   const [current, setCurrent] = useState(
@@ -26,7 +33,10 @@ const Home = () => {
   return (
     <>
       <div className="home">
-        <div className="home__section">
+        <div
+          className="home__section"
+          style={{ backgroundImage: `url(/images/${current.photo})` }}
+        >
           <div className="home__section__content">
             {current && <CardHeader item={current} />}
           </div>
@@ -47,6 +57,16 @@ const Home = () => {
           {previous && (
             <PreviousRulings title={previousText.title} items={previous} />
           )}
+
+          {notificationForm && (
+            <NotificationForm
+              question={notificationForm.question}
+              image={notificationForm.image}
+            />
+          )}
+
+          <div class="horizontal_dotted_line"></div>
+          <Footer />
         </div>
       </div>
     </>
