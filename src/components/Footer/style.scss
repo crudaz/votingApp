@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: gray;
+
+  & > div {
+    & > span,
+    & > svg:first-of-type {
+      padding-right: 20px;
+    }
+  }
+
+  & > div:nth-child(2) {
+    justify-items: flex-end;
+  }
+}
