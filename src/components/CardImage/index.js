@@ -5,7 +5,7 @@ import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
 
 import "./style.scss";
 
-const CardImage = ({ item }) => {
+const CardImage = ({ item, handleClick }) => {
   return (
     <div
       className="card-image"
@@ -29,7 +29,7 @@ const CardImage = ({ item }) => {
         </div>
         <span className="card-image__section__opinion">{item.opinion}</span>
         <div className="card-image__section__moreInfo">
-          <a href={item.moreInfo}>View Full Report</a>
+          <span onClick={() => handleClick(item)}>View Full Report</span>
         </div>
       </div>
       <div className="card-image__actions">
@@ -46,6 +46,7 @@ const CardImage = ({ item }) => {
 
 CardImage.propTypes = {
   item: PropTypes.object,
+  handleClick: PropTypes.func,
 };
 
 export default CardImage;

@@ -1,21 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
-
-import { CgClose } from "react-icons/cg";
 import "./style.scss";
 
-const NotificationForm = ({ question, image, handleClick }) => {
+const NotificationForm = ({ item, handleClick }) => {
   return (
-    <div class="form" style={{ backgroundImage: `url(/images/${image})` }}>
-      <h1>{question}</h1>
-      <a href="#">Submit a Name</a>
+    <div
+      className="form"
+      style={{ backgroundImage: `url(/images/${item.image})` }}
+      onClick={handleClick}
+    >
+      <h1>{item.question}</h1>
+      <span>Submit a Name</span>
     </div>
   );
 };
 
 NotificationForm.propTypes = {
-  question: PropTypes.object,
-  image: PropTypes.string,
+  item: PropTypes.object,
   handleClick: PropTypes.func,
 };
 

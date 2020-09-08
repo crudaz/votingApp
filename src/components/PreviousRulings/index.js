@@ -1,18 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-
-import { CgClose } from "react-icons/cg";
 import "./style.scss";
 
 import CardImage from "../CardImage";
 
-const PreviousRulings = ({ title, items }) => {
+const PreviousRulings = ({ title, items, handleClick }) => {
   return (
     <div className="previous">
       <span className="previous__title">{title}</span>
       <div className="previous__list">
         {items.map((item) => (
-          <CardImage item={item} />
+          <CardImage key={item.id} item={item} handleClick={handleClick} />
         ))}
       </div>
     </div>
@@ -22,6 +20,7 @@ const PreviousRulings = ({ title, items }) => {
 PreviousRulings.propTypes = {
   title: PropTypes.string,
   items: PropTypes.array,
+  handleClick: PropTypes.func,
 };
 
 export default PreviousRulings;

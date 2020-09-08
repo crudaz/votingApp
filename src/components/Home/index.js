@@ -16,11 +16,11 @@ import NotificationForm from "../NotificationForm";
 import Footer from "../Footer";
 
 const Home = () => {
-  const [current, setCurrent] = useState(
+  const [current] = useState(
     characters.filter((character) => character.isCurrent)[0]
   );
 
-  const [previous, setPrevious] = useState(
+  const [previous] = useState(
     characters.filter((character) => !character.isCurrent)
   );
 
@@ -30,16 +30,28 @@ const Home = () => {
     setShowNetnotification(false);
   };
 
+  const handleRulings = () => {
+    console.log("view Report");
+  };
+
+  const handleSubmitForm = () => {
+    console.log("submit form");
+  };
+
+  const handleVote = (item, vote) => {
+    console.log("item: ", item);
+    console.log("vote: ", vote);
+  };
+
   return (
     <>
       <div className="home">
+        {current && <CardHeader item={current} handleClick={handleVote} />}
         <div
           className="home__section"
           style={{ backgroundImage: `url(/images/${current.photo})` }}
         >
-          <div className="home__section__content">
-            {current && <CardHeader item={current} />}
-          </div>
+          <div className="home__section__content"></div>
           <div className="home__section__closing">
             <span>CLOSING IN</span>
             <span>
@@ -55,17 +67,21 @@ const Home = () => {
             />
           )}
           {previous && (
-            <PreviousRulings title={previousText.title} items={previous} />
+            <PreviousRulings
+              title={previousText.title}
+              items={previous}
+              handleClick={handleRulings}
+            />
           )}
 
           {notificationForm && (
             <NotificationForm
-              question={notificationForm.question}
-              image={notificationForm.image}
+              item={notificationForm}
+              handleClick={handleSubmitForm}
             />
           )}
 
-          <div class="horizontal_dotted_line"></div>
+          <div className="horizontal_dotted_line"></div>
           <Footer />
         </div>
       </div>

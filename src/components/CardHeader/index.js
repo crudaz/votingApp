@@ -5,7 +5,7 @@ import { FaWikipediaW, FaThumbsUp, FaThumbsDown } from "react-icons/fa";
 
 import "./style.scss";
 
-const CardHeader = ({ item }) => {
+const CardHeader = ({ item, handleClick }) => {
   return (
     <div className="card">
       <div className="card__section">
@@ -19,10 +19,10 @@ const CardHeader = ({ item }) => {
         <span className="card__section__question">What's Your Verdict?</span>
       </div>
       <div className="card__actions">
-        <div>
+        <div onClick={() => handleClick(item, "up")}>
           <FaThumbsUp />
         </div>
-        <div>
+        <div onClick={() => handleClick(item, "down")}>
           <FaThumbsDown />
         </div>
       </div>
@@ -32,6 +32,7 @@ const CardHeader = ({ item }) => {
 
 CardHeader.propTypes = {
   item: PropTypes.object,
+  handleClick: PropTypes.func,
 };
 
 export default CardHeader;
